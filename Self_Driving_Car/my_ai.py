@@ -74,4 +74,5 @@ class Dqn:
         td_loss = F.smooth_l1_loss(outputs, target)
         self.optimizer.zero_grad()
         td_loss.backward(retain_variables=True)
+        self.optmizer.step()
         
